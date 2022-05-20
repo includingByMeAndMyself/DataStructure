@@ -77,6 +77,14 @@ namespace LinkedLists.Models
             Count = 1;
         }
 
+        public void AppendHead(T data)
+        {
+            var item = new Item<T>(data);
+            item.Next = Head;
+            Head = item;
+        }
+
+
         public void Clear()
         {
             Head = null;
