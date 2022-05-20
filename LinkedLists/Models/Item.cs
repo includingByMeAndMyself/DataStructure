@@ -3,7 +3,7 @@
 
 namespace LinkedLists.Models
 {
-    public class Item<T>
+    public class Item<T> 
     {
         private T _data = default(T);
 

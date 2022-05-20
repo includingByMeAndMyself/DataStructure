@@ -1,9 +1,11 @@
-﻿
+﻿using System.Collections;
+using System.Collections.Generic;
+
 
 namespace LinkedLists.Models
 {
-    public class LinkedList<T>
-    {
+    public class LinkedList<T> : IEnumerable
+    { 
         public Item<T> Head { get; private set; }
        
         public Item<T> Tail { get; private set; }
@@ -59,7 +61,11 @@ namespace LinkedLists.Models
                     {
                         previous.Next = current.Next;
                         Count--;
+                        return;
                     }
+
+                    previous = current;
+                    current = current.Next;
                 }
             }
         }
@@ -69,6 +75,28 @@ namespace LinkedLists.Models
             Head = item;
             Tail = item;
             Count = 1;
+        }
+
+        public void Clear()
+        {
+            Head = null;
+            Tail = null;
+            Count = 0;
+        }
+
+        public int GetCount()
+        {
+            return Count;
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            var current = Head;
+            while(current != null)
+            {
+                yield return current.Date;
+                current = current.Next;
+            }
         }
     }
 }
