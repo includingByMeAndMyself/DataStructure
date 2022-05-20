@@ -82,6 +82,7 @@ namespace LinkedLists.Models
             var item = new Item<T>(data);
             item.Next = Head;
             Head = item;
+            Count++;
         }
 
 
