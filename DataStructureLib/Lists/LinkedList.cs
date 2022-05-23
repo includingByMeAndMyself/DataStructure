@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace LinkedLists.Models
+namespace Lists.Models
 {
     public class LinkedList<T> : IEnumerable
     { 

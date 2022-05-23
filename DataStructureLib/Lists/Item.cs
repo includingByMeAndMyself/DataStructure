@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace LinkedLists.Models
+namespace Lists.Models
 {
     public class Item<T> 
     {
