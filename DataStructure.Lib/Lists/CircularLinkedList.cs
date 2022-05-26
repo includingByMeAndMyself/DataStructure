@@ -8,7 +8,7 @@ namespace DataStructure.Lib.Lists
 {
     public class CircularLinkedList<T>
     {
-        public Duplexitem<T> Head { get; set; }
+        public DuplexItem<T> Head { get; set; }
 
         public int Count { get; set; }
 
@@ -19,7 +19,12 @@ namespace DataStructure.Lib.Lists
 
         public CircularLinkedList(T data)
         {
-            Head = new Duplexitem<T>(data);
+            SetDupluxItem(data);
+        }
+
+        public void SetDupluxItem(T data)
+        {
+            Head = new DuplexItem<T>(data);
             Head.Next = Head;
             Head.Previous = Head;
             Count++;
@@ -29,13 +34,10 @@ namespace DataStructure.Lib.Lists
         {
             if (Count == 0)
             {
-                Head = new Duplexitem<T>(data);
-                Head.Next = Head;
-                Head.Previous = Head;
-                Count++;
+                SetDupluxItem(data);
                 return;
             }
-            var item = new Duplexitem<T>(data);
+            var item = new DuplexItem<T>(data);
             item.Next = Head;
             item.Previous = Head.Previous;
             Head.Previous.Next = item;
