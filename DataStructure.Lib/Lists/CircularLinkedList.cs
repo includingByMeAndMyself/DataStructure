@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace DataStructure.Lib.Lists
 {
@@ -12,10 +8,6 @@ namespace DataStructure.Lib.Lists
 
         public int Count { get; set; }
 
-        public CircularLinkedList()
-        {
-
-        }
 
         public CircularLinkedList(T data)
         {
