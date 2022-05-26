@@ -1,15 +1,15 @@
 ﻿
 namespace DataStructure.Lib.Lists
 {
-    public class Duplexitem <T>
+    public class DuplexItem <T>
     {
         public T Data { get; set; }
 
-        public Duplexitem<T> Previous { get; set; }
+        public DuplexItem<T> Previous { get; set; }
 
-        public Duplexitem<T> Next { get; set; }
+        public DuplexItem<T> Next { get; set; }
 
-        public Duplexitem(T data)
+        public DuplexItem(T data)
         {
             Data = data;
         }

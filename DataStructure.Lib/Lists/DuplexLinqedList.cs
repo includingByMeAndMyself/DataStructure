@@ -6,9 +6,9 @@ namespace DataStructure.Lib.Lists
 {
     public class DuplexLinqedList<T> : IEnumerable<T>
     {
-        public Duplexitem<T> Head { get; set; }
+        public DuplexItem<T> Head { get; set; }
 
-        public Duplexitem<T> Tail { get; set; }
+        public DuplexItem<T> Tail { get; set; }
 
         public int Count { get; set; }
 
@@ -16,7 +16,7 @@ namespace DataStructure.Lib.Lists
 
         public DuplexLinqedList(T data)
         {
-            var item = new Duplexitem<T>(data);
+            var item = new DuplexItem<T>(data);
             Head = item;
             Tail = item;
             Count = 1;
@@ -24,7 +24,7 @@ namespace DataStructure.Lib.Lists
 
         public void Add(T data)
         {
-            var item = new Duplexitem<T>(data);
+            var item = new DuplexItem<T>(data);
 
             if (Count == 0) 
             {
